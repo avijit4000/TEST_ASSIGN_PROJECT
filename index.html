@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo List</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <ul>
+        {% for index, task in enumerate(tasks) %}
+            <li>{{ index }}. {{ task }}</li>
+        {% endfor %}
+    </ul>
+    <form method="POST" action="/add_task">
+        <input type="text" name="task" placeholder="Add a new task" required>
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>
